@@ -38,47 +38,45 @@
             // firstValueTextBox
             // 
             this.firstValueTextBox.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.firstValueTextBox.Location = new System.Drawing.Point(82, 80);
+            this.firstValueTextBox.Location = new System.Drawing.Point(12, 70);
             this.firstValueTextBox.Name = "firstValueTextBox";
-            this.firstValueTextBox.Size = new System.Drawing.Size(121, 36);
+            this.firstValueTextBox.Size = new System.Drawing.Size(219, 36);
             this.firstValueTextBox.TabIndex = 0;
             // 
             // secondValueTextBox
             // 
             this.secondValueTextBox.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.secondValueTextBox.Location = new System.Drawing.Point(309, 80);
+            this.secondValueTextBox.Location = new System.Drawing.Point(305, 70);
             this.secondValueTextBox.Name = "secondValueTextBox";
             this.secondValueTextBox.ReadOnly = true;
-            this.secondValueTextBox.Size = new System.Drawing.Size(121, 36);
+            this.secondValueTextBox.Size = new System.Drawing.Size(219, 36);
             this.secondValueTextBox.TabIndex = 1;
-            this.secondValueTextBox.TextChanged += new System.EventHandler(this.secondValueTextBox_TextChanged);
             // 
             // firstCurrencySelector
             // 
+            this.firstCurrencySelector.BackColor = System.Drawing.SystemColors.Window;
             this.firstCurrencySelector.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.firstCurrencySelector.FormattingEnabled = true;
-            this.firstCurrencySelector.Location = new System.Drawing.Point(82, 36);
+            this.firstCurrencySelector.Location = new System.Drawing.Point(12, 12);
             this.firstCurrencySelector.Name = "firstCurrencySelector";
-            this.firstCurrencySelector.Size = new System.Drawing.Size(121, 38);
+            this.firstCurrencySelector.Size = new System.Drawing.Size(219, 38);
             this.firstCurrencySelector.TabIndex = 2;
-            this.firstCurrencySelector.SelectedIndexChanged += new System.EventHandler(this.firstCurrencySelector_SelectedIndexChanged);
             // 
             // secondCurrencySelector
             // 
             this.secondCurrencySelector.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.secondCurrencySelector.FormattingEnabled = true;
-            this.secondCurrencySelector.Location = new System.Drawing.Point(309, 36);
+            this.secondCurrencySelector.Location = new System.Drawing.Point(305, 12);
             this.secondCurrencySelector.Name = "secondCurrencySelector";
-            this.secondCurrencySelector.Size = new System.Drawing.Size(121, 38);
+            this.secondCurrencySelector.Size = new System.Drawing.Size(219, 38);
             this.secondCurrencySelector.TabIndex = 3;
-            this.secondCurrencySelector.SelectedIndexChanged += new System.EventHandler(this.secondCurrencySelector_SelectedIndexChanged);
             // 
             // calculateButton
             // 
             this.calculateButton.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.calculateButton.Location = new System.Drawing.Point(297, 175);
+            this.calculateButton.Location = new System.Drawing.Point(333, 161);
             this.calculateButton.Name = "calculateButton";
-            this.calculateButton.Size = new System.Drawing.Size(146, 64);
+            this.calculateButton.Size = new System.Drawing.Size(191, 74);
             this.calculateButton.TabIndex = 4;
             this.calculateButton.Text = "Рассчитать";
             this.calculateButton.UseVisualStyleBackColor = true;
@@ -86,6 +84,7 @@
             // 
             // Form1
             // 
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(536, 280);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.secondCurrencySelector);
