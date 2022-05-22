@@ -109,15 +109,20 @@ namespace Labwork_3
 
             // Расчёт итогового значения в правом текст боксе
 
-            if (Regex.IsMatch(firstValueTextBox.Text, "[^0-9]"))                                 // Проверка на то, ввёл ли пользователь только цифры
+            if (Regex.IsMatch(firstValueTextBox.Text, "[0-9]"))                                                                    // Проверка на то, ввёл ли пользователь только цифры
             {
-                firstValueTextBox.Text = "Введите число!";                                       // Если есть посторонние символы - выдаём ошибку
-                secondValueTextBox.Text = null;                     
+                double firstValueTextBox_double = double.Parse(firstValueTextBox.Text);                                            // Если посторонних символов нет - делаем обычный расчёт 
+                secondValueTextBox.Text = Convert.ToString(firstValueTextBox_double * ratio);
+            }
+            else if (Regex.IsMatch(firstValueTextBox.Text, "[0-9]") && Regex.IsMatch(firstValueTextBox.Text, "[^,$,/b,/B,]"))      // Проверка на то, ввёл ли пользователь только цифры и запятую (для дробных чисел)
+            {
+                double firstValueTextBox_double = double.Parse(firstValueTextBox.Text);                                            // Если посторонних символов нет - делаем обычный расчёт 
+                secondValueTextBox.Text = Convert.ToString(firstValueTextBox_double * ratio);
             }
             else
             {
-                double firstValueTextBox_double = double.Parse(firstValueTextBox.Text);          // Если посторонних символов нет - делаем обычный расчёт 
-                secondValueTextBox.Text = Convert.ToString(firstValueTextBox_double * ratio);
+                firstValueTextBox.Text = "Введите число!";                                                                         // Если есть посторонние символы - выдаём ошибку
+                secondValueTextBox.Text = null;
             }
 
         }
