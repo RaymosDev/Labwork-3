@@ -7,6 +7,11 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Custom-Icon-Design-Flatastic-11-Cash.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Custom-Icon-Design-Flatastic-11-Cash.ico" />
+  </ItemGroup>
 
 </Project>
