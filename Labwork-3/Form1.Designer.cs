@@ -77,7 +77,7 @@
             // calculateButton
             // 
             this.calculateButton.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.calculateButton.Location = new System.Drawing.Point(305, 138);
+            this.calculateButton.Location = new System.Drawing.Point(305, 190);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(219, 78);
             this.calculateButton.TabIndex = 4;
@@ -119,6 +119,8 @@
             this.Controls.Add(this.secondValueTextBox);
             this.Controls.Add(this.firstValueTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(552, 319);
+            this.MinimumSize = new System.Drawing.Size(552, 319);
             this.Name = "Form1";
             this.Text = "Конвертер валют";
             this.Load += new System.EventHandler(this.Form1_Load);

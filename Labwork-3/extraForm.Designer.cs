@@ -37,7 +37,7 @@
             this.backButton_extra.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.backButton_extra.Location = new System.Drawing.Point(12, 12);
             this.backButton_extra.Name = "backButton_extra";
-            this.backButton_extra.Size = new System.Drawing.Size(160, 34);
+            this.backButton_extra.Size = new System.Drawing.Size(202, 34);
             this.backButton_extra.TabIndex = 1;
             this.backButton_extra.Text = "Назад";
             this.backButton_extra.UseVisualStyleBackColor = true;
@@ -47,7 +47,7 @@
             // 
             this.DarkThemeCheckBox.AutoSize = true;
             this.DarkThemeCheckBox.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DarkThemeCheckBox.Location = new System.Drawing.Point(21, 65);
+            this.DarkThemeCheckBox.Location = new System.Drawing.Point(45, 63);
             this.DarkThemeCheckBox.Name = "DarkThemeCheckBox";
             this.DarkThemeCheckBox.Size = new System.Drawing.Size(141, 29);
             this.DarkThemeCheckBox.TabIndex = 2;
@@ -59,9 +59,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(184, 118);
+            this.ClientSize = new System.Drawing.Size(226, 118);
             this.Controls.Add(this.DarkThemeCheckBox);
             this.Controls.Add(this.backButton_extra);
+            this.MaximumSize = new System.Drawing.Size(242, 157);
+            this.MinimumSize = new System.Drawing.Size(242, 157);
             this.Name = "extraForm";
             this.Text = "Дополнительно";
             this.Load += new System.EventHandler(this.extraForm_Load);

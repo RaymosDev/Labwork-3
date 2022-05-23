@@ -24,7 +24,7 @@ namespace Labwork_3
             form1.Show();
 
             
-            if (this.BackColor.Equals(Color.Gray))
+            if (this.BackColor.Equals(Color.Gray))  // Ставим тёмную тему для основного окна
             {
                 form1.BackColor = Color.Gray;
             }
