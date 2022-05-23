@@ -51,6 +51,7 @@
             this.helpTextBox.Location = new System.Drawing.Point(12, 52);
             this.helpTextBox.Multiline = true;
             this.helpTextBox.Name = "helpTextBox";
+            this.helpTextBox.ReadOnly = true;
             this.helpTextBox.Size = new System.Drawing.Size(475, 386);
             this.helpTextBox.TabIndex = 1;
             this.helpTextBox.Text = resources.GetString("helpTextBox.Text");
