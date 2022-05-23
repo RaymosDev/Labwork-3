@@ -11,6 +11,9 @@ namespace Labwork_3
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Белый фон
+            this.BackColor = Color.White;
+
             // Создаём массив с валютами для ComboBox'ов
             object[] currencies = new object[] { "Доллар США", "Евро", "Российский рубль", "Белорусский рубль", "Китайский юань", "Швейцарский франк", "Польский злотый", "Украинская гривна", "Чешская крона", "Японская иена" };
             firstCurrencySelector.Items.AddRange(currencies);
@@ -109,22 +112,53 @@ namespace Labwork_3
 
             // Расчёт итогового значения в правом текст боксе
 
-            if (Regex.IsMatch(firstValueTextBox.Text, "[0-9]"))                                                                    // Проверка на то, ввёл ли пользователь только цифры
+            if (Regex.IsMatch(firstValueTextBox.Text, "[0-9]") || (Regex.IsMatch(firstValueTextBox.Text, "[0-9]") && Regex.IsMatch(firstValueTextBox.Text, "[^,$,/b,/B,]")))     // Проверка на то, ввёл ли пользователь только цифры или только цифры+запятые (для дробных чисел)
             {
-                double firstValueTextBox_double = double.Parse(firstValueTextBox.Text);                                            // Если посторонних символов нет - делаем обычный расчёт 
-                secondValueTextBox.Text = Convert.ToString(firstValueTextBox_double * ratio);
-            }
-            else if (Regex.IsMatch(firstValueTextBox.Text, "[0-9]") && Regex.IsMatch(firstValueTextBox.Text, "[^,$,/b,/B,]"))      // Проверка на то, ввёл ли пользователь только цифры и запятую (для дробных чисел)
-            {
-                double firstValueTextBox_double = double.Parse(firstValueTextBox.Text);                                            // Если посторонних символов нет - делаем обычный расчёт 
+                double firstValueTextBox_double = double.Parse(firstValueTextBox.Text);        // Если посторонних символов нет - делаем обычный расчёт 
                 secondValueTextBox.Text = Convert.ToString(firstValueTextBox_double * ratio);
             }
             else
             {
-                firstValueTextBox.Text = "Введите число!";                                                                         // Если есть посторонние символы - выдаём ошибку
+                firstValueTextBox.Text = "Введите число!";      // Если есть посторонние символы - выдаём ошибку
                 secondValueTextBox.Text = null;
             }
 
+        }
+
+        // Код для кнопки "Справка"
+
+        private void helpButton_Click(object sender, EventArgs e)
+        {
+            var helpform = new helpForm();  // Создаём экземпляр окна "Справка"
+            this.Hide();    // Прячем Основное окно
+
+            if (this.BackColor.Equals(Color.Gray))  // Проверка на тёмную тему
+            {
+                helpform.BackColor = Color.Gray;
+            }
+            else
+            {
+                helpform.BackColor = Color.White;
+            }
+            helpform.Show();
+        }
+
+        // Код для кнопки "Дополнительно"
+
+        private void extraButton_Click(object sender, EventArgs e)
+        {
+            var extraform = new extraForm();    // Создаём экземпляр окна "Дополнительно"
+            this.Hide();    // Прячем основное окно
+
+            if (this.BackColor.Equals(Color.Gray))  // Проверка на тёмную тему
+            {
+                extraform.BackColor = Color.Gray;
+            }
+            else
+            {
+                extraform.BackColor = Color.White;
+            }
+            extraform.Show();
         }
 
 
@@ -174,5 +208,7 @@ namespace Labwork_3
             string parsedValue = Regex.Match(parsedHtmlPage, @"<div class=""valvalue"">([0-9]+\,[0-9]+)</div>").Groups[1].Value;
             return parsedValue;
         }
+
+        
     }
 }
